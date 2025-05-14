@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Russo One
+Author: Jovanny Lemonad
+Url: https://fonts.google.com/specimen/Russo+One
+
+Font: Montserrat
+Author: Julieta Ulanovsky,Sol Matas,Juan Pablo del Peral,Jacques Le Bailly
+Url: https://fonts.google.com/specimen/Montserrat

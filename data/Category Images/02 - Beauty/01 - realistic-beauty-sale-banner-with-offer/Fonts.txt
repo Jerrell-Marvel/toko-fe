@@ -1,0 +1,13 @@
+Fonts used in this design:
+
+Font: Alex Brush
+Author: TypeSETit
+Url: https://fonts.google.com/specimen/Alex+Brush
+
+Font: Abril Fatface
+Author: TypeTogether
+Url: https://fonts.google.com/specimen/Abril+Fatface
+
+Font: Josefin Sans
+Author: Santiago Orozco
+Url: https://fonts.google.com/specimen/Josefin+Sans

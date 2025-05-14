@@ -1,0 +1,455 @@
+[
+  {
+    "product_name": "White T-Shirt",
+    "product_price": 75000,
+    "product_stock": 100,
+    "product_details": "Our White T-Shirt is made of high-quality cotton, offering a soft and breathable feel. Perfect for casual wear, gym, or layering under a jacket.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Slim Fit Jeans",
+    "product_price": 250000,
+    "product_stock": 50,
+    "product_details": "A pair of stylish slim-fit jeans made with durable denim fabric. Designed for comfort and everyday use.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Red Lipstick",
+    "product_price": 120000,
+    "product_stock": 200,
+    "product_details": "A long-lasting, highly pigmented red lipstick that provides a smooth matte finish for an elegant look.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Moisturizing Face Cream",
+    "product_price": 180000,
+    "product_stock": 75,
+    "product_details": "A hydrating face cream enriched with natural ingredients to keep your skin soft and nourished all day.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Organic Rice 5kg",
+    "product_price": 90000,
+    "product_stock": 300,
+    "product_details": "Premium quality organic rice, free from chemicals and pesticides. Perfect for daily meals.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Instant Coffee 200g",
+    "product_price": 65000,
+    "product_stock": 150,
+    "product_details": "Rich and aromatic instant coffee made from the finest coffee beans. Ready to enjoy in seconds.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Smartphone 8 128 GB",
+    "product_price": 3500000,
+    "product_stock": 30,
+    "product_details": "A high-performance smartphone featuring a 6.5-inch display, powerful processor, and long battery life.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Wireless Earbuds",
+    "product_price": 500000,
+    "product_stock": 100,
+    "product_details": "Bluetooth-enabled wireless earbuds with noise cancellation and long battery life. Ideal for music and calls.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Wooden Dining Table",
+    "product_price": 1500000,
+    "product_stock": 20,
+    "product_details": "A beautifully crafted wooden dining table that comfortably seats six people. Made from high-quality teak wood.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Ergonomic Office Chair",
+    "product_price": 850000,
+    "product_stock": 40,
+    "product_details": "A comfortable and stylish office chair with adjustable height and lumbar support, designed for long working hours.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Running Shoes",
+    "product_price": 600000,
+    "product_stock": 80,
+    "product_details": "Lightweight and breathable running shoes with superior cushioning for maximum comfort during workouts.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Yoga Mat",
+    "product_price": 200000,
+    "product_stock": 150,
+    "product_details": "A non-slip yoga mat made from eco-friendly material, providing excellent support and grip during exercises.",
+    "category_id": 6
+  },
+
+  {
+    "product_name": "Maybelline Super Stay Matte Ink",
+    "product_price": 120000,
+    "product_stock": 100,
+    "product_details": "Maybelline Super Stay Matte Ink provides long-lasting, intense color with a matte finish. Its smudge-proof formula ensures up to 16 hours of wear, making it perfect for any occasion.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Indomie Mi Goreng",
+    "product_price": 3500,
+    "product_stock": 1000,
+    "product_details": "Indomie Mi Goreng is Indonesia's favorite instant fried noodle, offering a delicious blend of savory soy sauce, fried onion, and chili for an authentic taste experience.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Samsung Galaxy S23 Ultra",
+    "product_price": 18999000,
+    "product_stock": 20,
+    "product_details": "Samsung Galaxy S23 Ultra comes with a powerful Snapdragon 8 Gen 2 processor, a stunning 200MP camera, and an S Pen for ultimate productivity. Experience the next level of mobile innovation.",
+    "category_id": 4
+  },
+  {
+    "product_name": "IKEA MALM Bed Frame",
+    "product_price": 4500000,
+    "product_stock": 30,
+    "product_details": "The IKEA MALM bed frame offers a sleek and modern design with durable wood construction. It features built-in storage drawers, making it a practical choice for any bedroom.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Adidas Predator Edge.3 FG",
+    "product_price": 1100000,
+    "product_stock": 40,
+    "product_details": "The Adidas Predator Edge.3 FG is engineered for precision and control, featuring a textured upper for enhanced ball grip and a firm ground outsole for superior traction on the field.",
+    "category_id": 6
+  },
+
+  {
+    "product_name": "Levi's 501 Original Jeans",
+    "product_price": 899000,
+    "product_stock": 75,
+    "product_details": "The Levi's 501 Original Jeans offer a classic straight-leg fit with durable denim construction. Designed for comfort and timeless style, they are perfect for everyday wear.",
+    "category_id": 1
+  },
+  {
+    "product_name": "L'Oreal Paris Revitalift Night Cream",
+    "product_price": 250000,
+    "product_stock": 90,
+    "product_details": "L'Oreal Paris Revitalift Night Cream is formulated with Pro-Retinol and Centella Asiatica to reduce wrinkles and improve skin firmness while you sleep.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Blue Band Margarine 200g",
+    "product_price": 12000,
+    "product_stock": 500,
+    "product_details": "Blue Band Margarine is enriched with essential vitamins and a rich buttery taste, perfect for baking, cooking, and spreading on bread.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Apple MacBook Air M2",
+    "product_price": 19999000,
+    "product_stock": 15,
+    "product_details": "Apple MacBook Air M2 features a sleek, lightweight design with a powerful M2 chip, Liquid Retina display, and all-day battery life for ultimate portability and performance.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Minimalist Wooden Coffee Table",
+    "product_price": 1200000,
+    "product_stock": 25,
+    "product_details": "This minimalist wooden coffee table combines a sleek, modern aesthetic with durable solid wood construction, making it a stylish addition to any living space.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Yonex Astrox 99 Pro Badminton Racket",
+    "product_price": 2800000,
+    "product_stock": 35,
+    "product_details": "Yonex Astrox 99 Pro is designed for advanced players, offering enhanced power and control with its rotational generator system and stiff shaft.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Zara Men's Slim Fit Blazer",
+    "product_price": 1299000,
+    "product_stock": 30,
+    "product_details": "A stylish slim-fit blazer from Zara, made with high-quality fabric for a sophisticated and modern look. Perfect for formal and semi-formal occasions.",
+    "category_id": 1
+  },
+  {
+    "product_name": "The Body Shop Tea Tree Oil",
+    "product_price": 159000,
+    "product_stock": 80,
+    "product_details": "The Body Shop Tea Tree Oil is a purifying essential oil that helps reduce blemishes and control excess oil for clearer skin.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Nescafe Classic Instant Coffee 200g",
+    "product_price": 45000,
+    "product_stock": 300,
+    "product_details": "Nescafe Classic is made from high-quality coffee beans, offering a rich and aromatic taste to start your day right.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Sony WH-1000XM5 Noise Cancelling Headphones",
+    "product_price": 5999000,
+    "product_stock": 20,
+    "product_details": "Sony WH-1000XM5 delivers industry-leading noise cancellation, crystal-clear sound, and up to 30 hours of battery life for an immersive audio experience.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Inoac Premium Foam Mattress 160x200cm",
+    "product_price": 2750000,
+    "product_stock": 15,
+    "product_details": "Inoac's premium foam mattress offers superior comfort and durability, ensuring restful sleep with its high-density foam material.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Wilson NBA Authentic Basketball",
+    "product_price": 750000,
+    "product_stock": 50,
+    "product_details": "Wilson NBA Authentic Basketball is designed for professional play, featuring superior grip and durability for both indoor and outdoor use.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Maybelline Superstay Matte Ink Lipstick",
+    "product_price": 110000,
+    "product_stock": 120,
+    "product_details": "Maybelline Superstay Matte Ink Lipstick provides long-lasting, smudge-proof color with a smooth matte finish that stays put for up to 16 hours.",
+    "category_id": 2
+  },
+  {
+    "product_name": "IKEA MALM 3-Drawer Chest",
+    "product_price": 1799000,
+    "product_stock": 25,
+    "product_details": "IKEA MALM 3-Drawer Chest offers a sleek, modern design with spacious storage compartments, perfect for bedrooms and living spaces.",
+    "category_id": 5
+  },
+
+  {
+    "product_name": "H&M Cotton Oversized Hoodie",
+    "product_price": 349000,
+    "product_stock": 50,
+    "product_details": "A comfortable and stylish oversized hoodie made from soft cotton. Perfect for casual wear and layering during colder days.",
+    "category_id": 1
+  },
+  {
+    "product_name": "SK-II Facial Treatment Essence 230ml",
+    "product_price": 2650000,
+    "product_stock": 20,
+    "product_details": "SK-II Facial Treatment Essence contains over 90% Pitera to improve skin texture, reduce wrinkles, and enhance skin radiance.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Sunlight Dishwashing Liquid Refill 750ml",
+    "product_price": 18000,
+    "product_stock": 500,
+    "product_details": "Sunlight Dishwashing Liquid effectively removes grease and food stains with a fresh lemon fragrance, making dishwashing easier.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Logitech MX Master 3 Wireless Mouse",
+    "product_price": 1499000,
+    "product_stock": 30,
+    "product_details": "The Logitech MX Master 3 is an advanced wireless mouse with ultra-fast scrolling, ergonomic design, and precise tracking for productivity.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Minimalist Bookshelf with 5 Shelves",
+    "product_price": 899000,
+    "product_stock": 40,
+    "product_details": "A modern minimalist bookshelf with five spacious shelves, perfect for storing books, decorations, and household items.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Decathlon Domyos Adjustable Dumbbells 10kg",
+    "product_price": 650000,
+    "product_stock": 50,
+    "product_details": "A set of adjustable dumbbells with a 10kg total weight, ideal for home workouts and strength training.",
+    "category_id": 6
+  },
+
+  {
+    "product_name": "Kirkland Signature Organic Almonds 1.36kg",
+    "product_price": 375000,
+    "product_stock": 80,
+    "product_details": "Premium quality organic almonds from Kirkland Signature, rich in nutrients and perfect for healthy snacking.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Ashley Furniture Recliner Sofa",
+    "product_price": 5799000,
+    "product_stock": 10,
+    "product_details": "A luxurious recliner sofa by Ashley Furniture, designed for ultimate comfort with premium fabric and ergonomic support.",
+    "category_id": 5
+  },
+
+  {
+    "product_name": "Uniqlo Women's Cotton Long Dress",
+    "product_price": 399000,
+    "product_stock": 50,
+    "product_details": "A comfortable and breathable long dress made from 100% cotton. Suitable for daily wear with a minimalist and elegant design.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Cetaphil Gentle Skin Cleanser 500ml",
+    "product_price": 195000,
+    "product_stock": 60,
+    "product_details": "A mild, non-irritating facial and body cleanser for all skin types, recommended by dermatologists for sensitive skin.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Nutella Hazelnut Spread 750g",
+    "product_price": 85000,
+    "product_stock": 200,
+    "product_details": "Deliciously smooth chocolate hazelnut spread, perfect for breakfast or as a topping for your favorite desserts.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Paseo Soft Facial Tissue 250 Sheets",
+    "product_price": 15000,
+    "product_stock": 300,
+    "product_details": "Premium quality soft and absorbent facial tissue, suitable for everyday use.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Razer BlackWidow V4 Mechanical Gaming Keyboard",
+    "product_price": 2499000,
+    "product_stock": 25,
+    "product_details": "A high-performance mechanical gaming keyboard with Razer Green switches, RGB lighting, and dedicated macro keys.",
+    "category_id": 4
+  },
+  {
+    "product_name": "King Koil Luxury Mattress 180x200cm",
+    "product_price": 8999000,
+    "product_stock": 15,
+    "product_details": "A high-quality luxury mattress with premium materials that provide excellent comfort and back support.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Garmin Forerunner 245 GPS Running Watch",
+    "product_price": 4999000,
+    "product_stock": 18,
+    "product_details": "A GPS running smartwatch with advanced training features, heart rate monitoring, and music storage.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Wilson US Open Tennis Balls - 3 Pack",
+    "product_price": 120000,
+    "product_stock": 150,
+    "product_details": "Official tennis balls used in the US Open, designed for excellent durability and consistent bounce.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Zara Men's Slim Fit Chinos",
+    "product_price": 499000,
+    "product_stock": 70,
+    "product_details": "Zara Men's Slim Fit Chinos are made from high-quality cotton and feature a modern, tailored fit, perfect for both casual and formal occasions.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Bango Sweet Soy Sauce 600ml",
+    "product_price": 25000,
+    "product_stock": 400,
+    "product_details": "Bango Sweet Soy Sauce is a versatile condiment made from high-quality soybeans, perfect for marinating, dipping, or enhancing the flavor of your dishes.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Dyson V15 Detect Cordless Vacuum",
+    "product_price": 12000000,
+    "product_stock": 12,
+    "product_details": "The Dyson V15 Detect Cordless Vacuum features laser dust detection, powerful suction, and a HEPA filtration system for a thorough clean.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Adidas Ultraboost 22 Running Shoes",
+    "product_price": 2200000,
+    "product_stock": 50,
+    "product_details": "Adidas Ultraboost 22 running shoes feature responsive Boost cushioning and a Primeknit upper for a snug, comfortable fit, ideal for long-distance running.",
+    "category_id": 6
+  },
+  {
+    "product_name": "Mid-Century Modern Sofa",
+    "product_price": 5500000,
+    "product_stock": 10,
+    "product_details": "This mid-century modern sofa combines timeless design with premium upholstery, offering both style and comfort for your living room.",
+    "category_id": 5
+  },
+  {
+    "product_name": "LG 55-inch 4K UHD Smart TV",
+    "product_price": 8999000,
+    "product_stock": 8,
+    "product_details": "The LG 55-inch 4K UHD Smart TV features vibrant colors, Dolby Vision, and webOS for seamless streaming and smart functionality.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Industrial Style Dining Table",
+    "product_price": 4500000,
+    "product_stock": 5,
+    "product_details": "This industrial-style dining table is crafted from reclaimed wood and metal, offering a rugged yet elegant centerpiece for your dining area.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Modern Glass Top Coffee Table",
+    "product_price": 1500000,
+    "product_stock": 8,
+    "product_details": "This modern glass top coffee table features a sleek metal frame and a tempered glass surface, adding a contemporary touch to your living room.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Nestlé KitKat Chunky Chocolate Bar",
+    "product_price": 10000,
+    "product_stock": 500,
+    "product_details": "Nestlé KitKat Chunky is a delicious chocolate bar with a thick layer of creamy milk chocolate and a crispy wafer center.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Apple iPad Pro 12.9-inch (M1 Chip)",
+    "product_price": 17999000,
+    "product_stock": 15,
+    "product_details": "The Apple iPad Pro 12.9-inch features the powerful M1 chip, a stunning Liquid Retina XDR display, and support for the Apple Pencil and Magic Keyboard.",
+    "category_id": 4
+  },
+  {
+    "product_name": "MAC Matte Lipstick in Ruby Woo",
+    "product_price": 350000,
+    "product_stock": 80,
+    "product_details": "MAC Matte Lipstick in Ruby Woo is a vibrant red shade with a matte finish, offering long-lasting, bold color for any occasion.",
+    "category_id": 2
+  },
+  {
+    "product_name": "Quaker Oats Instant Oatmeal 800g",
+    "product_price": 45000,
+    "product_stock": 150,
+    "product_details": "Quaker Oats Instant Oatmeal is a nutritious and convenient breakfast option, rich in fiber and essential nutrients to start your day right.",
+    "category_id": 3
+  },
+  {
+    "product_name": "Tommy Hilfiger Men's Polo Shirt",
+    "product_price": 699000,
+    "product_stock": 50,
+    "product_details": "The Tommy Hilfiger Men's Polo Shirt is crafted from premium cotton and features a classic fit with the iconic Tommy Hilfiger logo.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Sony PlayStation 5 Console",
+    "product_price": 9999000,
+    "product_stock": 10,
+    "product_details": "The Sony PlayStation 5 offers lightning-fast loading, immersive 4K graphics, and a revolutionary gaming experience with the DualSense wireless controller.",
+    "category_id": 4
+  },
+  {
+    "product_name": "Scandinavian Style Bookshelf",
+    "product_price": 2500000,
+    "product_stock": 12,
+    "product_details": "This Scandinavian-style bookshelf features a minimalist design with multiple shelves, perfect for organizing books and decor in your living space.",
+    "category_id": 5
+  },
+  {
+    "product_name": "Puma Men's Essentials Logo T-Shirt",
+    "product_price": 249000,
+    "product_stock": 100,
+    "product_details": "The Puma Essentials Logo T-Shirt is made from soft cotton and features a classic fit with the iconic Puma logo, perfect for casual wear.",
+    "category_id": 1
+  },
+  {
+    "product_name": "Rattan Lounge Chair",
+    "product_price": 1800000,
+    "product_stock": 18,
+    "product_details": "This rattan lounge chair combines natural materials with a modern design, offering a comfortable and stylish seating option for your home.",
+    "category_id": 5
+  }
+]

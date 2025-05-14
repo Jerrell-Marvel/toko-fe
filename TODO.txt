@@ -1,0 +1,11 @@
+1. Refactor all cart API, without user_id in params
+
+add unique constraint
+
+Yang udah
+- Register
+- Login
+- getAllProducts
+- getAllCategories
+- getCart
+- addNewCart
