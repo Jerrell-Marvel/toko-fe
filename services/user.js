@@ -15,7 +15,9 @@ export const register = async ({ user_email, user_password, user_name }) => {
     await client.query("BEGIN");
 
     // check if email is already in use
-    const getUserByEmailResult = await userRepo.getSingleUserByEmail(user_email);
+    const getUserByEmailResult = await userRepo.getSingleUserByEmail(
+      user_email
+    );
     console.log(getUserByEmailResult);
     if (getUserByEmailResult.rowCount !== 0) {
       throw new BadRequestError("Email is already in use");
@@ -45,7 +47,10 @@ export const login = async ({ user_email, user_password }) => {
   }
   const user = userQueryResult.rows[0];
 
-  const isPasswordMatch = await bcrypt.compare(user_password, user.user_password);
+  const isPasswordMatch = await bcrypt.compare(
+    user_password,
+    user.user_password
+  );
 
   if (!isPasswordMatch) {
     throw new UnauthorizedError("Incorrect password");
@@ -88,23 +93,22 @@ export const getSingleUser = async (user_id) => {
   return queryResult.rows[0];
 };
 
-export const updateUser = async ({ user_id, user_password, user_name, user_phone }) => {
+export const updateUser = async ({ user_id, user_name, user_phone }) => {
   const client = await pool.connect();
 
   try {
     await client.query("BEGIN");
 
-    const hashedPassword = await hashPassword(user_password);
-
     const result = await userRepo.updateUser(client, {
       user_id,
-      user_password: hashedPassword,
       user_name,
       user_phone,
     });
 
     if (!result) {
-      throw new InternalServerError("Failed to update user with id = " + user_id);
+      throw new InternalServerError(
+        "Failed to update user with id = " + user_id
+      );
     }
 
     await client.query("COMMIT");
@@ -126,7 +130,9 @@ export const deleteUser = async (user_id) => {
     const result = await userRepo.deleteUser(client, user_id);
 
     if (!result) {
-      throw new InternalServerError("Failed to delete user with id = " + user_id);
+      throw new InternalServerError(
+        "Failed to delete user with id = " + user_id
+      );
     }
 
     await client.query("COMMIT");
@@ -176,7 +182,12 @@ export const getSpecificSubdistricts = async (district_id) => {
   return queryResult.rows;
 };
 
-export const addNewAddress = async ({ user_id, address_label, address_name, subdistrict_id }) => {
+export const addNewAddress = async ({
+  user_id,
+  address_label,
+  address_name,
+  subdistrict_id,
+}) => {
   const client = await pool.connect();
 
   try {
@@ -207,7 +218,12 @@ export const addNewAddress = async ({ user_id, address_label, address_name, subd
   }
 };
 
-export const updateAddress = async ({ address_id, address_label, address_name, subdistrict_id }) => {
+export const updateAddress = async ({
+  address_id,
+  address_label,
+  address_name,
+  subdistrict_id,
+}) => {
   const client = await pool.connect();
 
   try {

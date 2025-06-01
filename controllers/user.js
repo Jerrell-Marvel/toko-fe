@@ -44,7 +44,7 @@ export const getAllUsers = async (req, res) => {
 };
 
 export const getSingleUser = async (req, res) => {
-  const { user_id } = req.params;
+  const { user_id } = req.user;
 
   const user = await userService.getSingleUser(user_id);
 
@@ -55,13 +55,12 @@ export const updateUser = async (req, res) => {
   const { user_id } = req.user;
 
   // assumption that user_email can't be updated
-  const { user_password, user_name, user_phone } = req.body;
+  const { user_name, user_phone } = req.body;
 
   console.log(req.body);
 
   const result = await userService.updateUser({
     user_id,
-    user_password,
     user_name,
     user_phone,
   });
@@ -107,7 +106,11 @@ export const getDistrictsAndSubdistricts = async (_, res) => {
   const districts = await userService.getDistricts();
   const subdistricts = await userService.getSubdistricts();
 
-  return res.json({ success: true, districts: districts, subdistricts: subdistricts });
+  return res.json({
+    success: true,
+    districts: districts,
+    subdistricts: subdistricts,
+  });
 };
 
 export const getSpecificSubdistricts = async (req, res) => {

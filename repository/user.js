@@ -1,6 +1,9 @@
 import pool from "../db/db.js";
 
-export const insertUser = async (client, { user_email, user_password, user_name }) => {
+export const insertUser = async (
+  client,
+  { user_email, user_password, user_name }
+) => {
   const queryText = `
   INSERT INTO
     Users(user_email, user_password, user_name)
@@ -79,19 +82,21 @@ export const getSingleUserByEmail = async (user_email) => {
   return queryResult;
 };
 
-export const updateUser = async (client, { user_id, user_password, user_name, user_phone }) => {
+export const updateUser = async (
+  client,
+  { user_id, user_name, user_phone }
+) => {
   const queryText = `
   UPDATE
     Users
   SET
-    user_password = $1,
-    user_name = $2,
-    user_phone = $3
+    user_name = $1,
+    user_phone = $2
   WHERE
-    user_id = $4
+    user_id = $3
   `;
 
-  const values = [user_password, user_name, user_phone, user_id];
+  const values = [user_name, user_phone, user_id];
 
   const queryResult = await client.query(queryText, values);
 
@@ -140,10 +145,10 @@ export const getAddresses = async (user_id) => {
 
   const values = [user_id];
 
-  const queryResult = await pool.query(queryText,values);
+  const queryResult = await pool.query(queryText, values);
 
   return queryResult;
-}
+};
 
 export const getDistricts = async () => {
   const queryText = `
@@ -153,10 +158,10 @@ export const getDistricts = async () => {
   FROM districts d;
   `;
 
- const queryResult = await pool.query(queryText);
+  const queryResult = await pool.query(queryText);
 
- return queryResult;
-}
+  return queryResult;
+};
 export const getSubdistricts = async () => {
   const queryText = `
   Select 
@@ -166,11 +171,10 @@ export const getSubdistricts = async () => {
   FROM subdistricts sd;
   `;
 
- const queryResult = await pool.query(queryText);
+  const queryResult = await pool.query(queryText);
 
- return queryResult;
-
-}
+  return queryResult;
+};
 export const getSpecificSubdistricts = async (district_id) => {
   const queryText = `
   Select 
@@ -183,18 +187,16 @@ export const getSpecificSubdistricts = async (district_id) => {
     sd.district_id = $1;
   `;
 
-  const values = [district_id]
- const queryResult = await pool.query(queryText,values);
+  const values = [district_id];
+  const queryResult = await pool.query(queryText, values);
 
- return queryResult;
-}
+  return queryResult;
+};
 
-export const addNewAddress = async (client, {
-      user_id,
-      address_label,
-      address_name,
-      subdistrict_id,
-    }) => {
+export const addNewAddress = async (
+  client,
+  { user_id, address_label, address_name, subdistrict_id }
+) => {
   const queryText = `
   INSERT INTO
     Addresses(user_id, address_label, address_name, subdistrict_id)
@@ -211,13 +213,11 @@ export const addNewAddress = async (client, {
   return qureyResult;
 };
 
-export const updateAddress = async (client, {
-      address_id,
-      address_label,
-      address_name,
-      subdistrict_id,
-    }) => {
-   const queryText = `
+export const updateAddress = async (
+  client,
+  { address_id, address_label, address_name, subdistrict_id }
+) => {
+  const queryText = `
     UPDATE
       Addresses
     SET
@@ -228,9 +228,9 @@ export const updateAddress = async (client, {
       address_id = $4
     `;
 
-    const values = [address_label, address_name, subdistrict_id, address_id];
+  const values = [address_label, address_name, subdistrict_id, address_id];
 
-    const queryResult = await client.query(queryText, values);
+  const queryResult = await client.query(queryText, values);
 
-    return queryResult.rowCount > 0;
+  return queryResult.rowCount > 0;
 };
