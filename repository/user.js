@@ -44,7 +44,6 @@ export const getSingleUser = async (user_id) => {
   SELECT
     u.user_id,
     u.user_email,
-    u.user_password,
     u.user_name,
     u.user_role,
     u.user_phone
