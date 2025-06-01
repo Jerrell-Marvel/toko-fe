@@ -4,7 +4,6 @@ import { BadRequestError } from "../errors/BadRequestError.js";
 export const register = async (req, res) => {
   const { user_email, user_password, user_name } = req.body;
 
-
   if (!user_email) {
     throw new BadRequestError("Email is required");
   }
@@ -20,7 +19,6 @@ export const register = async (req, res) => {
     user_password,
     user_name,
   });
-  
 
   return res.status(201).json({ success: true });
 };
@@ -84,7 +82,7 @@ export const deleteUser = async (req, res) => {
 export const getAddresses = async (req, res) => {
   const { user_id } = req.user;
 
-  console.log("controllers "+ req.user)
+  console.log("controllers " + req.user);
 
   const addresses = await userService.getAddresses(user_id);
 
@@ -102,27 +100,27 @@ export const getAddresses = async (req, res) => {
   //   }
   // }
 
-  return res.json({ success : true , addresses});
+  return res.json({ success: true, addresses });
 };
 
 export const getDistrictsAndSubdistricts = async (_, res) => {
   const districts = await userService.getDistricts();
   const subdistricts = await userService.getSubdistricts();
 
-  return res.json({ success : true , districts : districts , subdistricts : subdistricts });
+  return res.json({ success: true, districts: districts, subdistricts: subdistricts });
 };
 
 export const getSpecificSubdistricts = async (req, res) => {
   const { district_id } = req.params;
-  
+
   const subdistricts = await userService.getSpecificSubdistricts(district_id);
 
-  return res.json({ success : true , subdistricts : subdistricts });
+  return res.json({ success: true, subdistricts: subdistricts });
 };
 
 export const addNewAddress = async (req, res) => {
   const { user_id } = req.user;
-  const { address_label, address_name , subdistrict_id } = req.body;
+  const { address_label, address_name, subdistrict_id } = req.body;
 
   // console.log(
   //   {
@@ -139,27 +137,26 @@ export const addNewAddress = async (req, res) => {
   if (!address_name) {
     throw new BadRequestError("Address name is required");
   }
-  
-  await userService.addNewAddress({
+
+  const addressId = await userService.addNewAddress({
     user_id,
     address_label,
     address_name,
     subdistrict_id,
-  })
+  });
 
-  return res.status(201).json({ success: true });
-}
+  return res.status(201).json({ success: true, address_id: addressId });
+};
 
 export const updateAddress = async (req, res) => {
-
   // assumption that user_email can't be updated
-  const { address_id, address_name, address_label, subdistrict_id  } = req.body;
+  const { address_id, address_name, address_label, subdistrict_id } = req.body;
 
   const result = await userService.updateAddress({
     address_id,
     address_name,
     address_label,
-    subdistrict_id
+    subdistrict_id,
   });
 
   return res.json({ success: true });
