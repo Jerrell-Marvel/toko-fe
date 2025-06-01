@@ -27,6 +27,7 @@ CREATE TABLE Addresses (
   address_id SERIAL PRIMARY KEY,
   user_id INT REFERENCES USERS(user_id) NOT NULL,
   address_name VARCHAR(255) NOT NULL,
+  address_label varchar(255) NOT NULL,
   is_active BOOLEAN DEFAULT TRUE NOT NULL,
   subdistrict_id INT REFERENCES Subdistricts(subdistrict_id) NOT NULL --Kelurahan
 );
@@ -79,6 +80,3 @@ CREATE TABLE Cart_Items (
   user_id INT REFERENCES Users(user_id) NOT NULL,
   product_quantity INT NOT NULL DEFAULT 1
 );
-
-  ALTER TABLE addresses
-  ADD COLUMN address_label varchar(255);
