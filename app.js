@@ -7,8 +7,12 @@ import morgan from "morgan";
 
 // Cors
 import cors from "cors";
+
+
+
 //Setting up cors
 app.use(cors());
+
 
 // Serve static from public folder
 app.use(express.static("public"));
@@ -37,7 +41,7 @@ app.use(morgan("dev"));
 
 // Routes import
 import productRoute from "./routes/product.js";
-import userRoute from "./routes//user.js";
+import userRoute from "./routes/user.js";
 import cartRoute from "./routes/cart.js";
 
 // Routes

@@ -80,3 +80,5 @@ CREATE TABLE Cart_Items (
   product_quantity INT NOT NULL DEFAULT 1
 );
 
+  ALTER TABLE addresses
+  ADD COLUMN address_label varchar(255);

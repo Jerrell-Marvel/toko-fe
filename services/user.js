@@ -16,11 +16,12 @@ export const register = async ({ user_email, user_password, user_name }) => {
 
     // check if email is already in use
     const getUserByEmailResult = await userRepo.getSingleUserByEmail(user_email);
+    console.log(getUserByEmailResult)
     if (getUserByEmailResult.rowCount !== 0) {
       throw new BadRequestError("Email is already in use");
     }
-
     const hashedPassword = await hashPassword(user_password);
+    console.log(hashedPassword)
 
     await userRepo.insertUser(client, {
       user_email,
@@ -63,6 +64,7 @@ export const login = async ({ user_email, user_password }) => {
       expiresIn: process.env.JWT_LIFETIME,
     }
   );
+
 
   return token;
 };
@@ -137,3 +139,103 @@ export const deleteUser = async (user_id) => {
     client.release();
   }
 };
+
+
+// Addresses
+
+export const getAddresses = async (user_id) => {
+  const queryResult = await userRepo.getAddresses(user_id);
+  
+  return queryResult.rows;
+}
+
+export const getDistricts = async () => {
+  const queryResult = await userRepo.getDistricts();
+  
+  if (queryResult.rowCount === 0) {
+    throw new NotFoundError("No Districts founded");
+  }
+
+  return queryResult.rows;
+}
+export const getSubdistricts = async () => {
+  const queryResult = await userRepo.getSubdistricts();
+
+  if (queryResult.rowCount === 0) {
+    throw new NotFoundError("No Subdistricts founded");
+  }
+
+  return queryResult.rows;
+}
+
+export const getSpecificSubdistricts = async (district_id) => {
+  const queryResult = await userRepo.getSpecificSubdistricts(district_id);
+
+  if (queryResult.rowCount === 0) {
+    throw new NotFoundError("No Subdistricts founded");
+  }
+
+  return queryResult.rows;
+}
+
+export const addNewAddress = async ({user_id,
+    address_label,
+    address_name,
+    subdistrict_id,}) => {
+  
+    const client = await pool.connect();
+
+  try {
+    await client.query("BEGIN");
+
+    // // check if email is already in use
+    // const getUserByEmailResult = await userRepo.getSingleUserByEmail(user_email);
+
+
+    // if (getUserByEmailResult.rowCount !== 0) {
+    //   throw new BadRequestError("Email is already in use");
+    // }
+
+    await userRepo.addNewAddress(client, {
+      user_id,
+      address_label,
+      address_name,
+      subdistrict_id,
+    });
+
+    await client.query("COMMIT");
+  } catch (error) {
+    await client.query("ROLLBACK");
+    throw error;
+  } finally {
+    client.release();
+  }
+}
+
+export const updateAddress = async ({
+    address_id,
+    address_label,
+    address_name,
+    subdistrict_id
+}) => {
+  const client = await pool.connect();
+
+  try {
+    await client.query("BEGIN");
+
+    await userRepo.updateAddress(client, {
+      address_id,
+      address_label,
+      address_name,
+      subdistrict_id,
+    });
+
+    await client.query("COMMIT");
+  } catch (error) {
+    await client.query("ROLLBACK");
+    throw error;
+  } finally {
+    client.release();
+  }
+
+}
