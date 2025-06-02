@@ -244,3 +244,23 @@ export const updateAddress = async ({
     client.release();
   }
 };
+
+export const deleteAddress = async ({ address_id }) => {
+  const client = await pool.connect();
+
+  try {
+    await client.query("BEGIN");
+
+    const isDeleted = await userRepo.deleteAddress(client, {
+      address_id,
+    });
+
+    await client.query("COMMIT");
+    return isDeleted;
+  } catch (error) {
+    await client.query("ROLLBACK");
+    throw error;
+  } finally {
+    client.release();
+  }
+};
