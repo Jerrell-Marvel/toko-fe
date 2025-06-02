@@ -3,15 +3,15 @@ import { BadRequestError } from "../errors/BadRequestError.js";
 
 export const register = async (req, res) => {
   const { user_email, user_password, user_name } = req.body;
-
+  
+  if (!user_name) {
+    throw new BadRequestError("Username is required");
+  }
   if (!user_email) {
     throw new BadRequestError("Email is required");
   }
   if (!user_password) {
     throw new BadRequestError("Password is required");
-  }
-  if (!user_name) {
-    throw new BadRequestError("User_name is required");
   }
 
   await userService.register({
