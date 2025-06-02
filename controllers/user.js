@@ -138,7 +138,7 @@ export const addNewAddress = async (req, res) => {
     throw new BadRequestError("Address label is required");
   }
   if (!address_name) {
-    throw new BadRequestError("Address name is required");
+    throw new BadRequestError("Address is required");
   }
 
   const addressId = await userService.addNewAddress({
