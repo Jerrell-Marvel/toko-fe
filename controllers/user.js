@@ -27,10 +27,10 @@ export const login = async (req, res) => {
   const { user_email, user_password } = req.body;
 
   if (!user_email) {
-    throw new BadRequestError("Email is required");
+    throw new BadRequestError("Email is empty");
   }
   if (!user_password) {
-    throw new BadRequestError("Password is required");
+    throw new BadRequestError("Password is empty");
   }
 
   const token = await userService.login({ user_email, user_password });

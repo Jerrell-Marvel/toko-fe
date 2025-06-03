@@ -43,7 +43,7 @@ export const register = async ({ user_email, user_password, user_name }) => {
 export const login = async ({ user_email, user_password }) => {
   const userQueryResult = await userRepo.getSingleUserByEmail(user_email);
   if (userQueryResult.rowCount === 0) {
-    throw new UnauthorizedError("Email is not registered");
+    throw new UnauthorizedError("Email or Password is Incorrect");
   }
   const user = userQueryResult.rows[0];
 
@@ -53,7 +53,7 @@ export const login = async ({ user_email, user_password }) => {
   );
 
   if (!isPasswordMatch) {
-    throw new UnauthorizedError("Incorrect password");
+    throw new UnauthorizedError("Email or Password is Incorrect");
   }
 
   const token = jwt.sign(
