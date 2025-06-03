@@ -164,3 +164,20 @@ export const updateAddress = async (req, res) => {
 
   return res.json({ success: true });
 };
+
+export const deleteAddress = async (req, res) => {
+  const { address_id } = req.body;
+
+  const result = await userService.deleteAddress({
+    address_id,
+  });
+
+  if (!result) {
+    return res.status(404).json({
+      success: false,
+      message: "Address not found or already inactive.",
+    });
+  }
+
+  return res.json({ success: true });
+};

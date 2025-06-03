@@ -140,7 +140,7 @@ export const getAddresses = async (user_id) => {
   ON 
     sd.district_id = d.district_id
   WHERE 
-    user_id = $1 ;`;
+    user_id = $1 AND is_active = TRUE;`;
 
   const values = [user_id];
 
@@ -228,6 +228,23 @@ export const updateAddress = async (
     `;
 
   const values = [address_label, address_name, subdistrict_id, address_id];
+
+  const queryResult = await client.query(queryText, values);
+
+  return queryResult.rowCount > 0;
+};
+
+export const deleteAddress = async (client, { address_id }) => {
+  const queryText = `
+    UPDATE
+      Addresses
+    SET
+      is_active = FALSE
+    WHERE
+      address_id = $1
+    `;
+
+  const values = [address_id];
 
   const queryResult = await client.query(queryText, values);
 

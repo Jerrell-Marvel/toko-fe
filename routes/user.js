@@ -11,6 +11,7 @@ import {
   getSpecificSubdistricts,
   addNewAddress,
   updateAddress,
+  deleteAddress,
 } from "../controllers/user.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 
@@ -25,5 +26,6 @@ router.get("/addresses", authMiddleware, getAddresses);
 router.patch("/updateuser", authMiddleware, updateUser);
 router.post("/newaddress", authMiddleware, addNewAddress);
 router.patch("/updateaddress", authMiddleware, updateAddress);
+router.delete("/deleteaddress", authMiddleware, deleteAddress);
 
 export default router;
