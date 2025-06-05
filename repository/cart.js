@@ -6,7 +6,8 @@ export const getUserCart = async (user_id) => {
     c.cart_item_id,
     c.product_id,
     c.user_id,
-    c.product_quantity
+    c.product_quantity,
+    p.product_name
   FROM
     Cart_Items c
   INNER JOIN
@@ -23,7 +24,10 @@ export const getUserCart = async (user_id) => {
   return queryResult;
 };
 
-export const findUserCartItemByUserAndProduct = async (client, { user_id, product_id }) => {
+export const findUserCartItemByUserAndProduct = async (
+  client,
+  { user_id, product_id }
+) => {
   const queryText = `
   SELECT
     c.cart_item_id,
@@ -60,7 +64,10 @@ export const findUserCartItem = async (client, { cart_item_id, user_id }) => {
   return queryResult;
 };
 
-export const insertNewCartItem = async (client, { user_id, product_id, product_quantity }) => {
+export const insertNewCartItem = async (
+  client,
+  { user_id, product_id, product_quantity }
+) => {
   const queryText = `
   INSERT INTO
     Cart_Items (user_id, product_id, product_quantity)
@@ -94,7 +101,10 @@ export const getProductStock = async (client, { product_id }) => {
   return queryResult;
 };
 
-export const updateCartItem = async (client, { cart_item_id, product_quantity }) => {
+export const updateCartItem = async (
+  client,
+  { cart_item_id, product_quantity }
+) => {
   const queryText = `
   UPDATE
     Cart_Items

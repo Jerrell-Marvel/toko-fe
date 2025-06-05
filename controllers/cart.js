@@ -21,7 +21,11 @@ export const insertNewCartItem = async (req, res) => {
     throw new BadRequestError("product_quantity must be included");
   }
 
-  await cartService.insertNewCartItem({ user_id, product_id, product_quantity });
+  await cartService.insertNewCartItem({
+    user_id,
+    product_id,
+    product_quantity,
+  });
 
   return res.json({ success: true });
 };
