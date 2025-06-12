@@ -1,16 +1,4 @@
 -- DDL
--- Buat database dengan nama yang sesuai DB_DATABASE pada .env
-DO
-$$
-BEGIN
-   IF NOT EXISTS (
-      SELECT FROM pg_database WHERE datname = 'tokofe-1'
-   ) THEN
-      CREATE DATABASE "tokofe-1";
-   END IF;
-END
-$$;
-
 
 -- User bisa member / admin
 CREATE TABLE Users (
